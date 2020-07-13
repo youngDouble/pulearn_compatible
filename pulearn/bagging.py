@@ -33,8 +33,8 @@ import numpy as np
 # we can assume joblib is present because it's required by sklearn anyway
 from joblib import Parallel, delayed
 from sklearn.base import ClassifierMixin
-from sklearn.externals.six import with_metaclass
-from sklearn.externals.six.moves import zip
+from six import with_metaclass
+from six.moves import zip
 from sklearn.metrics import accuracy_score
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.utils import (
@@ -45,7 +45,7 @@ from sklearn.utils.validation import has_fit_parameter, check_is_fitted
 from sklearn.utils import indices_to_mask, check_consistent_length
 from sklearn.utils.metaestimators import if_delegate_has_method
 from sklearn.utils.multiclass import check_classification_targets
-from sklearn.ensemble.base import BaseEnsemble, _partition_estimators
+from sklearn.ensemble._base import BaseEnsemble, _partition_estimators
 
 
 __all__ = ["BaggingPuClassifier"]
